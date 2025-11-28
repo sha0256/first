@@ -1,15 +1,10 @@
 {
-  "name": "My Web App",
-  "short_name": "MyApp",
-  "start_url": "./index.html",
+  "name": "PWA App",
+  "short_name": "PWA",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "description": "אפליקציית Web App לדוגמה ל-iPhone",
-  "icons": [
-    {
-      "src": "icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+  "theme_color": "#ffffff",
+  "icons": []
 }
+
