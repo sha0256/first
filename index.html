@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- iOS Safari WebApp -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="MyApp">
-
-  <!-- iOS icon -->
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <!-- Web manifest -->
-  <link rel="manifest" href="manifest.json">
-
-  <title>My Web App</title>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWA App</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 40px;
+      padding: 40px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+  <h1>ברוך הבא ל-PWA לאייפון 12</h1>
+  <p>אפליקציה פשוטה שעובדת כמו אפליקציה רגילה במסך הבית.</p>
 
-  <h1>ברוך הבא לאפליקציה!</h1>
-  <p>זהו גרסת Web App מלאה, מותאמת ל-iPhone.</p>
+  <button onclick="alert('הכפתור עובד!')">לחץ אותי</button>
 
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
 </body>
 </html>
+
